@@ -296,3 +296,70 @@ font-size: 1.25rem;
   display: flex;
   flex-direction: column;
 }
+
+.author-name {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  font-weight: 600;
+}
+
+.card-date {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.card-button {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  box-shadow: 0 4px 10px rgba(70, 70, 200, 0.3);
+}
+
+.card-button .ph {
+  transition: var(--transition-fast);
+}
+
+.card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(70, 70, 200, 0.4);
+}
+
+.card-button:active {
+  transform: translateY(0);
+}
+
+.card-button:hover .ph {
+  transform: translateX(4px);
+  transition: 0.5s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.card:hover .card-image {
+  transform: scale(1.05);
+  transition: var(--transition-slow);
+}
+
+.card:hover .image-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  transition: var(--transition-slow);
+}
+
+.card:hover .card-decoration {
+  transform: scale(1.2) rotate(15deg);
+  opacity: 0.08;
+}
+
