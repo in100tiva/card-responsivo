@@ -4,7 +4,7 @@
   /* Cores principais - Paleta moderna */
   --background: #f8fafc;
   --foreground: #0f172a;
-  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: rgba(255, 255, 255, 0.1);
   --primary: #6366f1;
   --primary-light: #818cf8;
   --primary-dark: #4f46e5;
@@ -50,7 +50,7 @@
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.5);
   --glass-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
-  --glass-blur: 10px;
+  --glass-blur: 5px;
 }
 
 *,
@@ -91,7 +91,6 @@ body {
   transition: var(--transition);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
 }
@@ -236,4 +235,64 @@ font-size: 1.25rem;
   color: var(--secondary);
   background-color: rgba(200, 70, 150, 0.1);
   transform: scale(1.1);
+}
+
+.card-description {
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-5);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.card-stats {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-5);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+}
+
+.stat .ph {
+  color: var(--secondary);
+  font-size: 1.125rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding-top: var(--spacing-4);
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.author-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
 }
