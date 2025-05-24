@@ -363,3 +363,44 @@ font-size: 1.25rem;
   opacity: 0.08;
 }
 
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .card-image {
+    flex: none;
+    height: 220px;
+  }
+
+  .card-content {
+    padding: var(--spacing-5);
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-stats {
+    flex-wrap: wrap;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+  }
+
+  .card-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card-decoration {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    right: -100px;
+  }
+}
